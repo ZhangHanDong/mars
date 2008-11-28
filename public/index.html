@@ -62,10 +62,10 @@
 
 
       #header {
-        background-image: url("images/rails.png");
+        background-image: url("images/mars_blog.jpg");
         background-repeat: no-repeat;
         background-position: top left;
-        height: 64px;
+        height: 220px;
       }
       #header h1, #header h2 {margin: 0}
       #header h2 {
@@ -178,29 +178,8 @@
       }
       
     </style>
-    <script type="text/javascript" src="javascripts/prototype.js"></script>
-    <script type="text/javascript" src="javascripts/effects.js"></script>
-    <script type="text/javascript">
-      function about() {
-        if (Element.empty('about-content')) {
-          new Ajax.Updater('about-content', 'rails/info/properties', {
-            method:     'get',
-            onFailure:  function() {Element.classNames('about-content').add('failure')},
-            onComplete: function() {new Effect.BlindDown('about-content', {duration: 0.25})}
-          });
-        } else {
-          new Effect[Element.visible('about-content') ? 
-            'BlindUp' : 'BlindDown']('about-content', {duration: 0.25});
-        }
-      }
-      
-      window.onload = function() {
-        $('search-text').value = '';
-        $('search').onsubmit = function() {
-          $('search-text').value = 'site:rubyonrails.org ' + $F('search-text');
-        }
-      }
-    </script>
+   
+   
   </head>
   <body>
     <div id="page">
